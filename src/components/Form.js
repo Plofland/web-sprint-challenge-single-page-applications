@@ -1,22 +1,20 @@
 import React from "react";
-import * from "./Assets/Pizza.jpg";
+import pizzaImg from "./Assets/Pizza.jpg";
 
-export default function Form() {
+export default function Form(props) {
 
+  const { values, submit, change, disabled, errors } = props;
 
   const onSubmit = (event) => {
     event.preventDefault();
     submit();
-  }
+  };
 
   const onChange = (event) => {
     const { name, value, type, checked } = event.target;
     const valueToUse = type === "checkbox" ? checked : value;
     change(name, valueToUse);
   };
-
-
-
 
   return (
     <form className="containter" onSubmit={onSubmit}>
@@ -31,12 +29,12 @@ export default function Form() {
       </div>
       <div className="pizzaBuilder">
         <h3 id="byopH3">Build Your Own Pizza</h3>
-        <img id="formImg" src="pizzaImg.jpg" alt="pizza" />
+        <img id="formImg" src="Pizza.jpg" alt="pizza" />
         <h2 id="byopH2">Build Your Own Pizza</h2>
         <label className="inputTitle">
           Choice of Size
           <div>{errors.sizeErr}</div>
-          <select className="dropDown">
+          <select className="dropDown" name='pizzaSize'>
             <option value="">-Select-</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -47,66 +45,66 @@ export default function Form() {
           Choice of Sauce
           <div>{errors.sauceErr}</div>
           <div>
-            <input type="radio">Original Red</input>
-            <input type="radio">Garlic Ranch</input>
-            <input type="radio">BBQ Sauce</input>
-            <input type="radio">Spinach Alfredo</input>
+            <input type="radio" name="sauceChoice" value="redSauce">Original Red</input>
+            <input type="radio" name="sauceChoice" value="garlicSauce">Garlic Ranch</input>
+            <input type="radio" name="sauceChoice" value="bbqSauce">BBQ Sauce</input>
+            <input type="radio" name="sauceChoice" value="spinSauce">Spinach Alfredo</input>
           </div>
         </label>
         <label className="inputTitle">
           Add Toppings
           <div>{errors.toppingsErr}</div>
           <div className="toppingCheckboxes">
-            <input type="checkbox" name="toppings" value="pepperoni">
+            <input type="checkbox" name="toppings" checked={values.pepperoni}>
               Pepperoni
             </input>
-            <input type="checkbox" name="toppings" value="dicedTomatoes">
+            <input type="checkbox" name="toppings" checked={values.dicedTomatoes}>
               Diced Tomatoes
             </input>
-            <input type="checkbox" name="toppings" value="sausage">
+            <input type="checkbox" name="toppings" checked={values.sausage}>
               Sausage
             </input>
-            <input type="checkbox" name="toppings" value="blackOlives">
+            <input type="checkbox" name="toppings" checked={values.blackOlives}>
               Black Olives
             </input>
-            <input type="checkbox" name="toppings" value="canadianBacon">
+            <input type="checkbox" name="toppings" checked={values.canadianBacon}>
               Canadian Bacon
             </input>
-            <input type="checkbox" name="toppings" value="roastedGarlic">
+            <input type="checkbox" name="toppings" checked={values.roastedGarlic}>
               Roasted Garlic
             </input>
-            <input type="checkbox" name="toppings" value="spicyItalianSausage">
+            <input type="checkbox" name="toppings" checked={values.spicyItalianSausage">
               Spicy Italian Sausage
             </input>
-            <input type="checkbox" name="toppings" value="artichokeHearts">
+            <input type="checkbox" name="toppings" checked={values.artichokeHearts}>
               Artichoke Hearts
             </input>
-            <input type="checkbox" name="toppings" value="grilledChicken">
+            <input type="checkbox" name="toppings" checked={values.grilledChicken}>
               Grilled Chicken
             </input>
-            <input type="checkbox" name="toppings" value="threeCheese">
+            <input type="checkbox" name="toppings" checked={values.threeCheese}>
               Three Cheese
             </input>
-            <input type="checkbox" name="toppings" value="onions">
+            <input type="checkbox" name="toppings" checked={values.onions}>
               Onions
             </input>
-            <input type="checkbox" name="toppings" value="pineapple">
+            <input type="checkbox" name="toppings" checked={values.pineapple}>
               Pineapple
             </input>
-            <input type="checkbox" name="toppings" value="greenPepper">
+            <input type="checkbox" name="toppings" checked={values.greenPepper}>
               Green Pepper
             </input>
-            <input type="checkbox" name="toppings" value="extraCheese">
+            <input type="checkbox" name="toppings" checked={values.extraCheese}>
               Extra Cheese
             </input>
           </div>
         </label>
-        <label className="inputTitle switch">
+        {/* <label className="inputTitle switch">
           Choice of Substitute
           <div>{errors.substituteErr}</div>
           <input type="checkbox">Gluten Free Crust (+ $1.00)</input>
           <span class="slider"></span>
-        </label>
+        </label> */}
         <label className="inputTitle">
           Special Instructions
           <input
@@ -116,19 +114,19 @@ export default function Form() {
         </label>
       </div>
       <div>
-        <select type='' name='quantity'>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-          <option value='6'>6</option>
-          <option value='7'>7</option>
-          <option value='8'>8</option>
-          <option value='9'>9</option>
-          <option value='10'>10</option>
+        <select type="" name="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
         </select>
-        <button type='submit' disabled={disabled}>
+        <button type="submit" disabled={disabled}>
           Add to Order
         </button>
       </div>
