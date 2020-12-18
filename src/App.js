@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import Form from "./components/Form";
-import schema from "./formSchema";
+import schema from "./components/formSchema";
 import * as yup from "yup";
 
 const initialPizzaFormValues = {
@@ -31,13 +31,17 @@ const initialPizzaFormErrors = {
 };
 
 const initialDisabled = true;
+const initialPizza = [];
 
 const App = () => {
+  const [pizza, setPizza] = useState(initialPizza);
   const [pizzaFormValues, setPizzaFormValues] = useState(
     initialPizzaFormValues,
   );
   const [formErrors, setFormErrors] = useState(initialPizzaFormErrors);
   const [disabled, setDisabled] = useState(initialDisabled);
+
+  const postNewPizza;
 
   const inputChange = (name, value) => {
     yup
@@ -63,8 +67,8 @@ const App = () => {
 
   const formSubmit = () => {
     const newPizza = {
-      pizzaSize: pizzaFormValues.pizzaSize.trim(),
-      sauceChoice: pizzaFormValues.sauceChoice.trim(),
+      pizzaSize: pizzaFormValues.pizzaSize,
+      sauceChoice: pizzaFormValues.sauceChoice,
       pepperoni: pizzaFormValues.pepperoni,
       dicedTomatoes: pizzaFormValues.dicedTomatoes,
       sausage: pizzaFormValues.sausage,
@@ -96,7 +100,7 @@ const App = () => {
         <Link to="/">Home</Link>
         <Link to="/">Help</Link>
       </nav>
-      <Route to="/">
+      <Route path="/">
         <Form
           values={pizzaFormValues}
           change={inputChange}

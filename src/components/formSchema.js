@@ -1,9 +1,16 @@
-import * as yup from 'yup;
+import * as yup from "yup";
 
 export default yup.object().shape({
-  pizzaSize: yup.string().oneOf(["small", "medium", "large"],"Please select a size"),
-  sauceChoice: yup.string().oneOf(["redSauce", "garlicSauce", "bbqSauce", "spinSauce"], "Please select at least one type of sauce"),
-  
+  pizzaSize: yup
+    .string()
+    .oneOf(["small", "medium", "large"], "Please select a size"),
+  sauceChoice: yup
+    .string()
+    .oneOf(
+      ["redSauce", "garlicSauce", "bbqSauce", "spinSauce"],
+      "Please select at least one type of sauce",
+    ),
+
   pepperoni: yup.boolean(),
   dicedTomatoes: yup.boolean(),
   sausage: yup.boolean(),
@@ -18,4 +25,4 @@ export default yup.object().shape({
   pineapple: yup.boolean(),
   greenPepper: yup.boolean(),
   extraCheese: yup.boolean(),
-})
+});
