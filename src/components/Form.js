@@ -1,6 +1,6 @@
 import React from "react";
 import pizzaImg from "./Assets/Pizza.jpg";
-import { Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 export default function Form(props) {
   const { values, submit, change, disabled, errors } = props;
@@ -20,9 +20,11 @@ export default function Form(props) {
     <div>
       <nav>
         <h1>Lambda Eats</h1>
-        <Link to="/">Home</Link>
+        <Link to="/">Home</Link> {/* get this to link back to the home page */}
         <Link to="/">Help</Link>
       </nav>
+      <Route path="/form"></Route>
+      <Route path="/home"></Route>
       <form className="containter" onSubmit={onSubmit}>
         {/* <div className="formHeader">
           <h2>Lambda Eats</h2>
@@ -35,7 +37,7 @@ export default function Form(props) {
         </div> */}
         <div className="pizzaBuilder">
           <h3 id="byopH3">Build Your Own Pizza</h3>
-          <img id="formImg" src="Pizza.jpg" alt="pizza" />
+          <img id="formImg" src="pizzaImg" alt="pizza" />
           <h2 id="byopH2">Build Your Own Pizza</h2>
           <label className="inputTitle">
             Choice of Size

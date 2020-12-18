@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import Form from "./components/Form";
+import Banner from "./components/Banner";
 import schema from "./components/formSchema";
 import * as yup from "yup";
 
@@ -41,7 +42,7 @@ const App = () => {
   const [formErrors, setFormErrors] = useState(initialPizzaFormErrors);
   const [disabled, setDisabled] = useState(initialDisabled);
 
-  const postNewPizza;
+  // const postNewPizza;
 
   const inputChange = (name, value) => {
     yup
@@ -97,10 +98,10 @@ const App = () => {
     <div>
       <nav>
         <h1>Lambda Eats</h1>
-        <Link to="/">Home</Link>
-        <Link to="/">Help</Link>
+        <Link to="/home">Home</Link>
+        <Link to="/help">Help</Link>
       </nav>
-      <Route path="/">
+      <Route path="/form">
         <Form
           values={pizzaFormValues}
           change={inputChange}
@@ -109,6 +110,10 @@ const App = () => {
           errors={formErrors}
         />
       </Route>
+      {/* <Banner /> */}
+      <h2>HEADER TEST</h2>
+      <img src="pizzaImg" alt="magarita pizza" />
+      <Link to="/form">Pizza?</Link>
     </div>
   );
 };
