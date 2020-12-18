@@ -40,7 +40,7 @@ export default function Form(props) {
           <label className="inputTitle">
             Choice of Size
             <div>{errors.sizeErr}</div>
-            <select className="dropDown" name="pizzaSize">
+            <select className="dropDown" name="pizzaSize" onChange={onChange}>
               <option value="">-Select-</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
@@ -51,16 +51,36 @@ export default function Form(props) {
             Choice of Sauce
             <div>{errors.sauceErr}</div>
             <div>
-              <input type="radio" name="sauceChoice" value="redSauce">
+              <input
+                type="radio"
+                name="sauceChoice"
+                value="redSauce"
+                onChange={onChange}
+              >
                 Original Red
               </input>
-              <input type="radio" name="sauceChoice" value="garlicSauce">
+              <input
+                type="radio"
+                name="sauceChoice"
+                value="garlicSauce"
+                onChange={onChange}
+              >
                 Garlic Ranch
               </input>
-              <input type="radio" name="sauceChoice" value="bbqSauce">
+              <input
+                type="radio"
+                name="sauceChoice"
+                value="bbqSauce"
+                onChange={onChange}
+              >
                 BBQ Sauce
               </input>
-              <input type="radio" name="sauceChoice" value="spinSauce">
+              <input
+                type="radio"
+                name="sauceChoice"
+                value="spinSauce"
+                onChange={onChange}
+              >
                 Spinach Alfredo
               </input>
             </div>
@@ -73,6 +93,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="pepperoni"
                 checked={values.pepperoni}
+                onChange={onChange}
               >
                 Pepperoni
               </input>
@@ -80,16 +101,23 @@ export default function Form(props) {
                 type="checkbox"
                 name="dicedTomatoes"
                 checked={values.dicedTomatoes}
+                onChange={onChange}
               >
                 Diced Tomatoes
               </input>
-              <input type="checkbox" name="sausage" checked={values.sausage}>
+              <input
+                type="checkbox"
+                name="sausage"
+                checked={values.sausage}
+                onChange={onChange}
+              >
                 Sausage
               </input>
               <input
                 type="checkbox"
                 name="blackOlives"
                 checked={values.blackOlives}
+                onChange={onChange}
               >
                 Black Olives
               </input>
@@ -97,6 +125,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="canadianBacon"
                 checked={values.canadianBacon}
+                onChange={onChange}
               >
                 Canadian Bacon
               </input>
@@ -104,6 +133,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="roastedGarlic"
                 checked={values.roastedGarlic}
+                onChange={onChange}
               >
                 Roasted Garlic
               </input>
@@ -111,6 +141,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="spicyItalianSausage"
                 checked={values.spicyItalianSausage}
+                onChange={onChange}
               >
                 Spicy Italian Sausage
               </input>
@@ -118,6 +149,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="artichokeHearts"
                 checked={values.artichokeHearts}
+                onChange={onChange}
               >
                 Artichoke Hearts
               </input>
@@ -125,6 +157,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="grilledChicken"
                 checked={values.grilledChicken}
+                onChange={onChange}
               >
                 Grilled Chicken
               </input>
@@ -132,16 +165,23 @@ export default function Form(props) {
                 type="checkbox"
                 name="threeCheese"
                 checked={values.threeCheese}
+                onChange={onChange}
               >
                 Three Cheese
               </input>
-              <input type="checkbox" name="onions" checked={values.onions}>
+              <input
+                type="checkbox"
+                name="onions"
+                checked={values.onions}
+                onChange={onChange}
+              >
                 Onions
               </input>
               <input
                 type="checkbox"
                 name="pineapple"
                 checked={values.pineapple}
+                onChange={onChange}
               >
                 Pineapple
               </input>
@@ -149,6 +189,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="greenPepper"
                 checked={values.greenPepper}
+                onChange={onChange}
               >
                 Green Pepper
               </input>
@@ -156,6 +197,7 @@ export default function Form(props) {
                 type="checkbox"
                 name="extraCheese"
                 checked={values.extraCheese}
+                onChange={onChange}
               >
                 Extra Cheese
               </input>
@@ -173,11 +215,12 @@ export default function Form(props) {
               type="text"
               name="specialInstructions"
               placeholder="Anything else you'd like to add?"
+              onChange={onChange}
             ></input>
           </label>
         </div>
         <div>
-          <select type="" name="quantity">
+          <select name="quantity" value={values.quantity} onChange={onChange}>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

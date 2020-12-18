@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
 // import axios from "axios";
 import Form from "./components/Form";
@@ -60,6 +60,34 @@ const App = () => {
       [name]: value,
     });
   };
+
+  const formSubmit = () => {
+    const newPizza = {
+      pizzaSize: pizzaFormValues.pizzaSize.trim(),
+      sauceChoice: pizzaFormValues.sauceChoice.trim(),
+      pepperoni: pizzaFormValues.pepperoni,
+      dicedTomatoes: pizzaFormValues.dicedTomatoes,
+      sausage: pizzaFormValues.sausage,
+      blackOlives: pizzaFormValues.blackOlives,
+      canadianBacon: pizzaFormValues.canadianBacon,
+      roastedGarlic: pizzaFormValues.roastedGarlic,
+      spicyItalianSausage: pizzaFormValues.spicyItalianSausage,
+      artichokeHearts: pizzaFormValues.artichokeHearts,
+      grilledChicken: pizzaFormValues.grilledChicken,
+      threeCheese: pizzaFormValues.threeCheese,
+      onions: pizzaFormValues.onions,
+      pineapple: pizzaFormValues.pineapple,
+      greenPepper: pizzaFormValues.greenPepper,
+      extraCheese: pizzaFormValues.extraCheese,
+      specialInstructions: pizzaFormValues.specialInstructions,
+    };
+  };
+
+  useEffect(() => {
+    schema.isValid(pizzaFormValues).then((valid) => {
+      setDisabled(!valid);
+    });
+  }, [pizzaFormValues]);
 
   return (
     <div>
