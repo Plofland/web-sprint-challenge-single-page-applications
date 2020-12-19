@@ -90,7 +90,7 @@ export default function Form(props) {
                 Pepperoni
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="pepperoni"
                   value="pepperoni"
                   checked={values.pepperoni}
                   onChange={onChange}
@@ -100,7 +100,7 @@ export default function Form(props) {
                 Diced Tomatoes
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="dicedTomatoes"
                   value="dicedTomatoes"
                   checked={values.dicedTomatoes}
                   onChange={onChange}
@@ -110,7 +110,7 @@ export default function Form(props) {
                 Sausage
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="sausage"
                   value="sausage"
                   checked={values.sausage}
                   onChange={onChange}
@@ -120,7 +120,7 @@ export default function Form(props) {
                 Black Olives
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="blackOlives"
                   value="blackOlives"
                   checked={values.blackOlives}
                   onChange={onChange}
@@ -130,7 +130,7 @@ export default function Form(props) {
                 Canadian Bacon
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="canadianBacon"
                   value="canadianBacon"
                   checked={values.canadianBacon}
                   onChange={onChange}
@@ -140,7 +140,7 @@ export default function Form(props) {
                 Roasted Garlic
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="roastedGarlic"
                   value="roastedGarlic"
                   checked={values.roastedGarlic}
                   onChange={onChange}
@@ -150,7 +150,7 @@ export default function Form(props) {
                 Spicy Italian Sausage
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="spicyItalianSausage"
                   value="spicyItalianSausage"
                   checked={values.spicyItalianSausage}
                   onChange={onChange}
@@ -160,7 +160,7 @@ export default function Form(props) {
                 Artichoke Hearts
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="artichokeHearts"
                   value="artichokeHearts"
                   checked={values.artichokeHearts}
                   onChange={onChange}
@@ -170,7 +170,7 @@ export default function Form(props) {
                 Grilled Chicken
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="grilledChicken"
                   value="grilledChicken"
                   checked={values.grilledChicken}
                   onChange={onChange}
@@ -180,7 +180,7 @@ export default function Form(props) {
                 Three Cheese
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="threeCheese"
                   value="threeCheese"
                   checked={values.threeCheese}
                   onChange={onChange}
@@ -190,7 +190,7 @@ export default function Form(props) {
                 Onions
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="onions"
                   value="onions"
                   checked={values.onions}
                   onChange={onChange}
@@ -200,7 +200,7 @@ export default function Form(props) {
                 Pineapple
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="pineapple"
                   value="pineapple"
                   checked={values.pineapple}
                   onChange={onChange}
@@ -210,7 +210,7 @@ export default function Form(props) {
                 Green Pepper
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="greenPepper"
                   value="greenPepper"
                   checked={values.greenPepper}
                   onChange={onChange}
@@ -220,7 +220,7 @@ export default function Form(props) {
                 Extra Cheese
                 <input
                   type="checkbox"
-                  name="toppingBox"
+                  name="extraCheese"
                   value="extraCheese"
                   checked={values.extraCheese}
                   onChange={onChange}
