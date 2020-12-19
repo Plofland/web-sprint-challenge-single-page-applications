@@ -98,8 +98,10 @@ const App = () => {
     <div>
       <nav>
         <h1>Lambda Eats</h1>
-        <Link to="/home">Home</Link>
-        <Link to="/help">Help</Link>
+        <div className="navLinks">
+          <Link to="/">Home</Link>
+          <Link to="/help">Help</Link>
+        </div>
       </nav>
 
       <Route path="/form">
@@ -111,7 +113,7 @@ const App = () => {
           errors={formErrors}
         />
       </Route>
-      <Route exact path="/home">
+      <Route exact path="/">
         <Banner />
       </Route>
     </div>

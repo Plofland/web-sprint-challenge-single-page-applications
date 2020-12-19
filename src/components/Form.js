@@ -1,6 +1,6 @@
 import React from "react";
 import pizzaImg from "./Assets/Pizza.jpg";
-import { Route, Link } from "react-router-dom";
+// import { Route, Link } from "react-router-dom";
 
 export default function Form(props) {
   const { values, submit, change, disabled, errors } = props;
@@ -18,9 +18,9 @@ export default function Form(props) {
 
   return (
     <div>
-      <form className="containter" onSubmit={onSubmit}>
+      <form className="container" onSubmit={onSubmit}>
         <div className="pizzaBuilder">
-          <h3 id="byopH3">Build Your Own Pizza</h3>
+          <h3 id="byopH3">This could be yours</h3>
           <img id="formImg" src={pizzaImg} alt="pizza" />
           <h2 id="byopH2">Build Your Own Pizza</h2>
           <label>
@@ -214,7 +214,7 @@ export default function Form(props) {
             <span class="slider"></span>
           </label> */}
           <label>
-            &nbsp;Special Instructions&nbsp;
+            Special Instructions&nbsp;
             <input
               type="text"
               name="specialInstructions"

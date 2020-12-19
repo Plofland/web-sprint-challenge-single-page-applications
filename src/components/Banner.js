@@ -5,10 +5,11 @@ import Form from "./Form";
 
 export default function Banner() {
   return (
-    <div>
-      <h2>HEADER TEST</h2>
+    <div className="homePageContainer">
       <img src={pizzaImg} alt="magarita pizza" />
-      <Link to="/form">Pizza?</Link>
+      <div id="linkText">
+        <Link to="/form">Pizza?</Link>
+      </div>
       {/* <Route>
         <Form />
       </Route> */}
