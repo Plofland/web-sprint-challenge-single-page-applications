@@ -39,7 +39,7 @@ export default function Form(props) {
 
           <div>
             <div className="inputTitle">
-              Choice of Sauce&nbsp;
+              Choice of Sauce
               <div>{errors.sauceErr}</div>
             </div>
             <div>
@@ -91,7 +91,8 @@ export default function Form(props) {
                 Pepperoni
                 <input
                   type="checkbox"
-                  name="pepperoni"
+                  name="toppingBox"
+                  value="pepperoni"
                   checked={values.pepperoni}
                   onChange={onChange}
                 ></input>
@@ -100,7 +101,8 @@ export default function Form(props) {
                 Diced Tomatoes
                 <input
                   type="checkbox"
-                  name="dicedTomatoes"
+                  name="toppingBox"
+                  value="dicedTomatoes"
                   checked={values.dicedTomatoes}
                   onChange={onChange}
                 ></input>
@@ -109,7 +111,8 @@ export default function Form(props) {
                 Sausage
                 <input
                   type="checkbox"
-                  name="sausage"
+                  name="toppingBox"
+                  value="sausage"
                   checked={values.sausage}
                   onChange={onChange}
                 ></input>
@@ -118,7 +121,8 @@ export default function Form(props) {
                 Black Olives
                 <input
                   type="checkbox"
-                  name="blackOlives"
+                  name="toppingBox"
+                  value="blackOlives"
                   checked={values.blackOlives}
                   onChange={onChange}
                 ></input>
@@ -127,7 +131,8 @@ export default function Form(props) {
                 Canadian Bacon
                 <input
                   type="checkbox"
-                  name="canadianBacon"
+                  name="toppingBox"
+                  value="canadianBacon"
                   checked={values.canadianBacon}
                   onChange={onChange}
                 ></input>
@@ -136,7 +141,8 @@ export default function Form(props) {
                 Roasted Garlic
                 <input
                   type="checkbox"
-                  name="roastedGarlic"
+                  name="toppingBox"
+                  value="roastedGarlic"
                   checked={values.roastedGarlic}
                   onChange={onChange}
                 ></input>
@@ -145,7 +151,8 @@ export default function Form(props) {
                 Spicy Italian Sausage
                 <input
                   type="checkbox"
-                  name="spicyItalianSausage"
+                  name="toppingBox"
+                  value="spicyItalianSausage"
                   checked={values.spicyItalianSausage}
                   onChange={onChange}
                 ></input>
@@ -154,7 +161,8 @@ export default function Form(props) {
                 Artichoke Hearts
                 <input
                   type="checkbox"
-                  name="artichokeHearts"
+                  name="toppingBox"
+                  value="artichokeHearts"
                   checked={values.artichokeHearts}
                   onChange={onChange}
                 ></input>
@@ -163,7 +171,8 @@ export default function Form(props) {
                 Grilled Chicken
                 <input
                   type="checkbox"
-                  name="grilledChicken"
+                  name="toppingBox"
+                  value="grilledChicken"
                   checked={values.grilledChicken}
                   onChange={onChange}
                 ></input>
@@ -172,7 +181,8 @@ export default function Form(props) {
                 Three Cheese
                 <input
                   type="checkbox"
-                  name="threeCheese"
+                  name="toppingBox"
+                  value="threeCheese"
                   checked={values.threeCheese}
                   onChange={onChange}
                 ></input>
@@ -181,7 +191,8 @@ export default function Form(props) {
                 Onions
                 <input
                   type="checkbox"
-                  name="onions"
+                  name="toppingBox"
+                  value="onions"
                   checked={values.onions}
                   onChange={onChange}
                 ></input>
@@ -190,7 +201,8 @@ export default function Form(props) {
                 Pineapple
                 <input
                   type="checkbox"
-                  name="pineapple"
+                  name="toppingBox"
+                  value="pineapple"
                   checked={values.pineapple}
                   onChange={onChange}
                 ></input>
@@ -199,7 +211,8 @@ export default function Form(props) {
                 Green Pepper
                 <input
                   type="checkbox"
-                  name="greenPepper"
+                  name="toppingBox"
+                  value="greenPepper"
                   checked={values.greenPepper}
                   onChange={onChange}
                 ></input>
@@ -208,7 +221,8 @@ export default function Form(props) {
                 Extra Cheese
                 <input
                   type="checkbox"
-                  name="extraCheese"
+                  name="toppingBox"
+                  value="extraCheese"
                   checked={values.extraCheese}
                   onChange={onChange}
                 ></input>
@@ -226,6 +240,7 @@ export default function Form(props) {
             <input
               type="text"
               name="specialInstructions"
+              value={values.instructions}
               placeholder="Health concerns?"
               onChange={onChange}
             ></input>
