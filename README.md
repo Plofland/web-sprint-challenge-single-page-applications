@@ -49,7 +49,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 - [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
 - [x] Create a new branch: `git checkout -b <firstName-lastName>`
 - [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [x] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
@@ -58,7 +58,7 @@ Your finished project must include all of the following requirements:
 - [x] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
 - [x] A form with a "/pizza" route
 - [x] A name text input field
-- [ ] Validation for name - name must be at least 2 characters
+- [x] Validation for name - name must be at least 2 characters
 - [x] A dropdown for pizza size
 - [x] A checklist for toppings - at least 4 (hint: name each separately!)
 - [x] Text input for special instructions
@@ -80,7 +80,7 @@ After finishing your required elements, you can push your work further. These go
 
 - [ ] Toggle form component for gluten free crust
 - [ ] Turn form element sections into nested routes
-- [ ] Test more of the application with Cypress
+- [x] Test more of the application with Cypress
 - [ ] Build UI for the eventuality of a network error when POSTing the order
 - [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
 

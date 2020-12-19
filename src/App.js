@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import Form from "./components/Form";
 import Banner from "./components/Banner";
 import schema from "./validation/formSchema";
@@ -23,12 +23,14 @@ const initialPizzaFormValues = {
   pineapple: false,
   greenPepper: false,
   extraCheese: false,
+  orderName: "",
   specialInstructions: "",
 };
 
 const initialPizzaFormErrors = {
   pizzaSize: "",
   sauceChoice: "",
+  orderName: "",
 };
 
 const initialDisabled = true;
@@ -96,6 +98,7 @@ const App = () => {
       pineapple: pizzaFormValues.pineapple,
       greenPepper: pizzaFormValues.greenPepper,
       extraCheese: pizzaFormValues.extraCheese,
+      orderName: pizzaFormValues.orderName,
       specialInstructions: pizzaFormValues.specialInstructions,
     };
     // postNewPizza(newPizza); use this if I need to make an axios post to an API

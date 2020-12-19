@@ -24,23 +24,18 @@ export default function Form(props) {
           <h2 id="byopH2">Build Your Own Pizza</h2>
 
           <label>
-            <div className="inputTitle">
-              Size
-              <div>{errors.sizeErr}</div>
-            </div>
+            <div className="inputTitle">Size</div>
             <select className="dropDown" name="pizzaSize" onChange={onChange}>
               <option value="">-Select-</option>
               <option value="small">Small</option>
               <option value="medium">Medium</option>
               <option value="large">Large</option>
             </select>
+            <div>{errors.pizzaSize}</div>
           </label>
 
           <div>
-            <div className="inputTitle">
-              Choice of Sauce
-              <div>{errors.sauceErr}</div>
-            </div>
+            <div className="inputTitle">Choice of Sauce</div>
             <div>
               <label>
                 Red Sauce
@@ -78,13 +73,11 @@ export default function Form(props) {
                   onChange={onChange}
                 ></input>
               </label>
+              <div>{errors.sauceChoice}</div>
             </div>
           </div>
           <div>
-            <div className="inputTitle">
-              Add Toppings
-              <div>{errors.toppingsErr}</div>
-            </div>
+            <div className="inputTitle">Add Toppings</div>
             <div className="toppingCheckboxes">
               <label>
                 Pepperoni
@@ -228,9 +221,20 @@ export default function Form(props) {
               </label>
             </div>
           </div>
+          <label>
+            <div className="inputTitle">What is your name?</div>
+            <input
+              type="text"
+              name="orderName"
+              value={values.orderName}
+              placeholder="First Name"
+              onChange={onChange}
+            ></input>
+            <div>{errors.orderName}</div>
+          </label>
           {/* <label className="inputTitle switch">
             Choice of Substitute
-            <div>{errors.substituteErr}</div>
+            <div>{errors.substitute}</div>
             <input type="checkbox">Gluten Free Crust (+ $1.00)</input>
             <span class="slider"></span>
           </label> */}
@@ -245,6 +249,7 @@ export default function Form(props) {
             ></input>
           </label>
         </div>
+        <div>{errors.quantity}</div>
         <div>
           <select name="quantity" value={values.quantity} onChange={onChange}>
             <option value="">Quantity</option>

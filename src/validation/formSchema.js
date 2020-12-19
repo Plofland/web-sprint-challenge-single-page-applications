@@ -27,6 +27,10 @@ export default yup.object().shape({
   pineapple: yup.boolean(),
   greenPepper: yup.boolean(),
   extraCheese: yup.boolean(),
+  orderName: yup
+    .string()
+    .required("Please give us your name")
+    .min(2, "Name must be at least 2 characters long"),
   quantity: yup
     .string()
     .required("Please select the number of pizzas you would like")
