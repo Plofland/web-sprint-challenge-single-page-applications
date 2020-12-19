@@ -42,17 +42,19 @@ const App = () => {
   const [formErrors, setFormErrors] = useState(initialPizzaFormErrors);
   const [disabled, setDisabled] = useState(initialDisabled);
 
-  const postNewPizza = (newPizza) => {
-    axios //even though this post wont go through, it should set the state of pizza
-      .post("url", newPizza)
-      .then((res) => {
-        setPizza([res.data, ...pizza]);
-        setPizzaFormValues(initialPizzaFormValues);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // Use this if I ever need to make an axios post to an API with the new form values
+  // const postNewPizza = (newPizza) => {
+  //   axios //even though this post wont go through, it should set the state of pizza
+  //     .post("url", newPizza)
+  //     .then((res) => {
+  //       setPizza([res.data, ...pizza]);
+  //       setPizzaFormValues(initialPizzaFormValues);
+  //       debugger;
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   const inputChange = (name, value) => {
     yup
@@ -96,7 +98,9 @@ const App = () => {
       extraCheese: pizzaFormValues.extraCheese,
       specialInstructions: pizzaFormValues.specialInstructions,
     };
-    postNewPizza(newPizza);
+    // postNewPizza(newPizza); use this if I need to make an axios post to an API
+    setPizza([...pizza, newPizza]);
+    setPizzaFormValues(initialPizzaFormValues);
   };
 
   useEffect(() => {

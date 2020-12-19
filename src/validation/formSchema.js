@@ -13,7 +13,6 @@ export default yup.object().shape({
       "Please select at least one type of sauce",
     ),
   specialInstructions: yup.string(),
-  // toppingBox: yup.boolean(),
   pepperoni: yup.boolean(),
   dicedTomatoes: yup.boolean(),
   sausage: yup.boolean(),
