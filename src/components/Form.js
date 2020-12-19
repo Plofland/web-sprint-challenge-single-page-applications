@@ -1,9 +1,8 @@
 import React from "react";
 import pizzaImg from "./Assets/Pizza.jpg";
-// import { Route, Link } from "react-router-dom";
 
 export default function Form(props) {
-  const { values, submit, change, disabled, errors } = props;
+  const { values, change, submit, disabled, errors } = props;
 
   const onSubmit = (event) => {
     event.preventDefault();

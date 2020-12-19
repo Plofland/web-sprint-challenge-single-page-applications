@@ -1,7 +1,7 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import pizzaImg from "./Assets/Pizza.jpg";
-import Form from "./Form";
+// import Form from "./Form";
 
 export default function Banner() {
   return (
