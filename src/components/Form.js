@@ -18,28 +18,12 @@ export default function Form(props) {
 
   return (
     <div>
-      <nav>
-        <h1>Lambda Eats</h1>
-        <Link to="/">Home</Link> {/* get this to link back to the home page */}
-        <Link to="/">Help</Link>
-      </nav>
-      <Route path="/form"></Route>
-      <Route path="/home"></Route>
       <form className="containter" onSubmit={onSubmit}>
-        {/* <div className="formHeader">
-          <h2>Lambda Eats</h2>
-          <div className="linkBtn">
-            <a href="/app.js">Home</a>
-          </div>
-          <div className="linkBtn">
-            <a href="/">Help</a>
-          </div>
-        </div> */}
         <div className="pizzaBuilder">
           <h3 id="byopH3">Build Your Own Pizza</h3>
-          <img id="formImg" src="pizzaImg" alt="pizza" />
+          <img id="formImg" src="{pizzaImg}" alt="pizza" />
           <h2 id="byopH2">Build Your Own Pizza</h2>
-          <label className="inputTitle">
+          <label>
             Choice of Size
             <div>{errors.sizeErr}</div>
             <select className="dropDown" name="pizzaSize" onChange={onChange}>
@@ -49,160 +33,178 @@ export default function Form(props) {
               <option value="large">Large</option>
             </select>
           </label>
-          <label className="inputTitle">
+          <label>
             Choice of Sauce
             <div>{errors.sauceErr}</div>
             <div>
-              <input
-                type="radio"
-                name="sauceChoice"
-                value="redSauce"
-                onChange={onChange}
-              >
-                Original Red
-              </input>
-              <input
-                type="radio"
-                name="sauceChoice"
-                value="garlicSauce"
-                onChange={onChange}
-              >
+              <label>
+                Red Sauce
+                <input
+                  type="radio"
+                  name="sauceChoice"
+                  value="redSauce"
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Garlic Ranch
-              </input>
-              <input
-                type="radio"
-                name="sauceChoice"
-                value="bbqSauce"
-                onChange={onChange}
-              >
+                <input
+                  type="radio"
+                  name="sauceChoice"
+                  value="garlicSauce"
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 BBQ Sauce
-              </input>
-              <input
-                type="radio"
-                name="sauceChoice"
-                value="spinSauce"
-                onChange={onChange}
-              >
+                <input
+                  type="radio"
+                  name="sauceChoice"
+                  value="bbqSauce"
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Spinach Alfredo
-              </input>
+                <input
+                  type="radio"
+                  name="sauceChoice"
+                  value="spinSauce"
+                  onChange={onChange}
+                ></input>
+              </label>
             </div>
           </label>
-          <label className="inputTitle">
+          <label>
             Add Toppings
             <div>{errors.toppingsErr}</div>
             <div className="toppingCheckboxes">
-              <input
-                type="checkbox"
-                name="pepperoni"
-                checked={values.pepperoni}
-                onChange={onChange}
-              >
+              <label>
                 Pepperoni
-              </input>
-              <input
-                type="checkbox"
-                name="dicedTomatoes"
-                checked={values.dicedTomatoes}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="pepperoni"
+                  checked={values.pepperoni}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Diced Tomatoes
-              </input>
-              <input
-                type="checkbox"
-                name="sausage"
-                checked={values.sausage}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="dicedTomatoes"
+                  checked={values.dicedTomatoes}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Sausage
-              </input>
-              <input
-                type="checkbox"
-                name="blackOlives"
-                checked={values.blackOlives}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="sausage"
+                  checked={values.sausage}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Black Olives
-              </input>
-              <input
-                type="checkbox"
-                name="canadianBacon"
-                checked={values.canadianBacon}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="blackOlives"
+                  checked={values.blackOlives}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Canadian Bacon
-              </input>
-              <input
-                type="checkbox"
-                name="roastedGarlic"
-                checked={values.roastedGarlic}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="canadianBacon"
+                  checked={values.canadianBacon}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Roasted Garlic
-              </input>
-              <input
-                type="checkbox"
-                name="spicyItalianSausage"
-                checked={values.spicyItalianSausage}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="roastedGarlic"
+                  checked={values.roastedGarlic}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Spicy Italian Sausage
-              </input>
-              <input
-                type="checkbox"
-                name="artichokeHearts"
-                checked={values.artichokeHearts}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="spicyItalianSausage"
+                  checked={values.spicyItalianSausage}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Artichoke Hearts
-              </input>
-              <input
-                type="checkbox"
-                name="grilledChicken"
-                checked={values.grilledChicken}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="artichokeHearts"
+                  checked={values.artichokeHearts}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Grilled Chicken
-              </input>
-              <input
-                type="checkbox"
-                name="threeCheese"
-                checked={values.threeCheese}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="grilledChicken"
+                  checked={values.grilledChicken}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Three Cheese
-              </input>
-              <input
-                type="checkbox"
-                name="onions"
-                checked={values.onions}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="threeCheese"
+                  checked={values.threeCheese}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Onions
-              </input>
-              <input
-                type="checkbox"
-                name="pineapple"
-                checked={values.pineapple}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="onions"
+                  checked={values.onions}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Pineapple
-              </input>
-              <input
-                type="checkbox"
-                name="greenPepper"
-                checked={values.greenPepper}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="pineapple"
+                  checked={values.pineapple}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Green Pepper
-              </input>
-              <input
-                type="checkbox"
-                name="extraCheese"
-                checked={values.extraCheese}
-                onChange={onChange}
-              >
+                <input
+                  type="checkbox"
+                  name="greenPepper"
+                  checked={values.greenPepper}
+                  onChange={onChange}
+                ></input>
+              </label>
+              <label>
                 Extra Cheese
-              </input>
+                <input
+                  type="checkbox"
+                  name="extraCheese"
+                  checked={values.extraCheese}
+                  onChange={onChange}
+                ></input>
+              </label>
             </div>
           </label>
           {/* <label className="inputTitle switch">
@@ -211,18 +213,19 @@ export default function Form(props) {
             <input type="checkbox">Gluten Free Crust (+ $1.00)</input>
             <span class="slider"></span>
           </label> */}
-          <label className="inputTitle">
+          <label>
             Special Instructions
             <input
               type="text"
               name="specialInstructions"
-              placeholder="Anything else you'd like to add?"
+              placeholder="Health concerns?"
               onChange={onChange}
             ></input>
           </label>
         </div>
         <div>
           <select name="quantity" value={values.quantity} onChange={onChange}>
+            <option value="">Quantity</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -241,58 +244,4 @@ export default function Form(props) {
       </form>
     </div>
   );
-}
-
-{
-  /* ~~~Switch Styling~~~
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-} */
 }

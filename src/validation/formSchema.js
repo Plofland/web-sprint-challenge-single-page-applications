@@ -25,4 +25,10 @@ export default yup.object().shape({
   pineapple: yup.boolean(),
   greenPepper: yup.boolean(),
   extraCheese: yup.boolean(),
+  quantity: yup
+    .string()
+    .oneOf(
+      ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "Please select a quantity",
+    ),
 });
