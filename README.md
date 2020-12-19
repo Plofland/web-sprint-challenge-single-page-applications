@@ -35,7 +35,8 @@ Demonstrate your understanding of this week's concepts by answering the followin
 ```The `useRouteMatch` hook is used to add nested routes to an application so that you can change a single parameter in a URL without having to change the entire thing.
 
 1. How would you explain form validation to someone who has never programmed before?
-~~~Validation is a way make sure that the quality of data that is given by the user is up to par with expected user data. For example, I want a user to sign up to my site but I want to make sure that they have a strong password. I would use validation to make sure that they use upper and lower case letters with at least one special character.
+
+````Validation is a way make sure that the quality of data that is given by the user is up to par with expected user data. For example, I want a user to sign up to my site but I want to make sure that they have a strong password. I would use validation to make sure that they use upper and lower case letters with at least one special character.
 
 1. In 1-2 sentences, define end to end testing.
 ~~~End to end testing is a type of test to ensure that the entire user experience, from landing on the page to accomplishing a task, is functional. These tests mimic how the user might interact with the user interface in order to attemp to find potential bugs that a user might experience.
@@ -67,9 +68,9 @@ Your finished project must include all of the following requirements:
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [x] test that you can add text to the box
+- [x] test that you can select multiple toppings
+- [x] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -101,3 +102,4 @@ Follow these steps for completing your project.
 - [ ] Add your team lead as a reviewer on the pull request
 - [ ] Your team lead will count the project as complete after receiving your pull request
 ```
+````

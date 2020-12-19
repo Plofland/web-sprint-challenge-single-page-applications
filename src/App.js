@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import Form from "./components/Form";
 import Banner from "./components/Banner";
 import schema from "./validation/formSchema";
@@ -32,17 +32,28 @@ const initialPizzaFormErrors = {
 };
 
 const initialDisabled = true;
-// const initialPizza = [];
+const initialPizza = [];
 
 const App = () => {
-  // const [pizza, setPizza] = useState(initialPizza);
+  const [pizza, setPizza] = useState(initialPizza);
   const [pizzaFormValues, setPizzaFormValues] = useState(
     initialPizzaFormValues,
   );
   const [formErrors, setFormErrors] = useState(initialPizzaFormErrors);
   const [disabled, setDisabled] = useState(initialDisabled);
 
-  // const postNewPizza;
+  const postNewPizza = (newPizza) => {
+    axios //even though this post wont go through, it should set the state of pizza
+      .post("url", newPizza)
+      .then((res) => {
+        setPizza([res.data, ...pizza]);
+        setPizzaFormValues(initialPizzaFormValues);
+      })
+      .catch((err) => {
+        console.log(err);
+        debugger;
+      });
+  };
 
   const inputChange = (name, value) => {
     yup
@@ -86,6 +97,7 @@ const App = () => {
       extraCheese: pizzaFormValues.extraCheese,
       specialInstructions: pizzaFormValues.specialInstructions,
     };
+    postNewPizza(newPizza);
   };
 
   useEffect(() => {

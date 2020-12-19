@@ -57,7 +57,7 @@ a:hover {
   width: 70%;
   background-color: #b34a3c;
   color: antiquewhite;
-  margin: 0 auto;
+  margin: 0 auto 10% auto;
 }
 .container img {
   width: 100%;

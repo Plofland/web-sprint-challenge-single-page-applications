@@ -12,7 +12,7 @@ export default yup.object().shape({
       ["redSauce", "garlicSauce", "bbqSauce", "spinSauce"],
       "Please select at least one type of sauce",
     ),
-
+  specialInstructions: yup.string(),
   // pepperoni: yup.boolean(),
   // dicedTomatoes: yup.boolean(),
   // sausage: yup.boolean(),
