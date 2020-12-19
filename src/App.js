@@ -72,7 +72,7 @@ const App = () => {
         });
       });
     setPizzaFormValues({
-      ...setPizzaFormValues,
+      ...pizzaFormValues,
       [name]: value,
     });
   };

@@ -45,6 +45,6 @@ describe("Pizza Order Form", () => {
     special().should("have.value", "Here are instructions");
     quantity().select("2");
     quantity().should("have.value", "2");
-    submitBtn().should("be.disabled");
+    submitBtn().should("be.not.disabled");
   });
 });
