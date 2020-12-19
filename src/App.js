@@ -3,6 +3,7 @@ import { Route, Link } from "react-router-dom";
 // import axios from "axios";
 import Form from "./components/Form";
 import Banner from "./components/Banner";
+import Congrats from "./components/Congrats";
 import schema from "./validation/formSchema";
 import * as yup from "yup";
 
@@ -130,6 +131,9 @@ const App = () => {
           disabled={disabled}
           errors={formErrors}
         />
+      </Route>
+      <Route path="/congrats">
+        <Congrats />
       </Route>
       <Route exact path="/">
         <Banner />

@@ -1,5 +1,7 @@
 import React from "react";
+// import { Redirect } from "react-router-dom";
 import pizzaImg from "./Assets/Pizza.jpg";
+// import Congrats from "./Congrats";
 
 export default function Form(props) {
   const { values, change, submit, disabled, errors } = props;
@@ -7,6 +9,7 @@ export default function Form(props) {
   const onSubmit = (event) => {
     event.preventDefault();
     submit();
+    // <Redirect to="/congrats" />;
   };
 
   const onChange = (event) => {
@@ -15,13 +18,17 @@ export default function Form(props) {
     change(name, valueToUse);
   };
 
+  const onClick = (event) => {
+    window.location.href = "Congrats";
+  };
+
   return (
     <div>
       <form className="container" onSubmit={onSubmit}>
         <div className="pizzaBuilder">
           <h3 id="byopH3">This could be yours</h3>
           <img id="formImg" src={pizzaImg} alt="pizza" />
-          <h2 id="byopH2">Build Your Own Pizza</h2>
+          <h2 id="byopH2">How Do You Want Your Pizza?</h2>
 
           <label>
             <div className="inputTitle">Size</div>
@@ -264,9 +271,10 @@ export default function Form(props) {
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
-          <button type="submit" disabled={disabled}>
+          <button type="submit" disabled={disabled} onClick={onClick}>
             Add to Order
           </button>
+          {/* onClick={onClick} */}
         </div>
       </form>
     </div>

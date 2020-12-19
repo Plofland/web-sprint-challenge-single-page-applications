@@ -70,3 +70,18 @@ a:hover {
 .pizzaBuilder {
   text-align: center;
 }
+
+.congrats {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.congrats img {
+  width: 70%;
+  margin: 0 auto;
+}

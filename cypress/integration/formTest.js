@@ -8,6 +8,7 @@ describe("Pizza Order Form", () => {
   const sauceChoiceGar = () => cy.get('input[value="garlicSauce"]');
   const tCB = () => cy.get('input[type="checkbox"]');
   const tCBtomatoes = () => cy.get('input[value="dicedTomatoes"]');
+  const nameInput = () => cy.get('input[name="orderName"]');
   const special = () => cy.get('input[name="specialInstructions"]');
   const quantity = () => cy.get('select[name="quantity"]');
   it("can select a pizza size", () => {
@@ -41,10 +42,12 @@ describe("Pizza Order Form", () => {
     sauceChoiceGar().should("have.value", "garlicSauce");
     tCBtomatoes().check("dicedTomatoes");
     tCBtomatoes().should("not.have.value", "sausage");
+    nameInput().type("Peter");
     special().type("Here are instructions");
     special().should("have.value", "Here are instructions");
     quantity().select("2");
     quantity().should("have.value", "2");
     submitBtn().should("be.not.disabled");
+    submitBtn().click();
   });
 });
