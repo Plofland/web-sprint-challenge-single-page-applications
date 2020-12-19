@@ -214,7 +214,7 @@ export default function Form(props) {
             <span class="slider"></span>
           </label> */}
           <label>
-            Special Instructions&nbsp;
+            &nbsp;Special Instructions&nbsp;
             <input
               type="text"
               name="specialInstructions"

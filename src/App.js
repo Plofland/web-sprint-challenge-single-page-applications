@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 // import axios from "axios";
 import Form from "./components/Form";
-// import Banner from "./components/Banner";
+import Banner from "./components/Banner";
 import schema from "./validation/formSchema";
 import * as yup from "yup";
-import pizzaImg from "./components/Assets/Pizza.jpg";
 
 const initialPizzaFormValues = {
   pizzaSize: "",
@@ -102,6 +101,7 @@ const App = () => {
         <Link to="/home">Home</Link>
         <Link to="/help">Help</Link>
       </nav>
+
       <Route path="/form">
         <Form
           values={pizzaFormValues}
@@ -111,10 +111,9 @@ const App = () => {
           errors={formErrors}
         />
       </Route>
-      {/* <Banner /> */}
-      <h2>HEADER TEST</h2>
-      <img src={pizzaImg} alt="magarita pizza" />
-      <Link to="/form">Pizza?</Link>
+      <Route exact path="/home">
+        <Banner />
+      </Route>
     </div>
   );
 };
