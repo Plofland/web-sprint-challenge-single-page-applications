@@ -5,6 +5,7 @@ import Form from "./components/Form";
 // import Banner from "./components/Banner";
 import schema from "./validation/formSchema";
 import * as yup from "yup";
+import pizzaImg from "./components/Assets/Pizza.jpg";
 
 const initialPizzaFormValues = {
   pizzaSize: "",
@@ -112,7 +113,7 @@ const App = () => {
       </Route>
       {/* <Banner /> */}
       <h2>HEADER TEST</h2>
-      <img src="pizzaImg" alt="magarita pizza" />
+      <img src={pizzaImg} alt="magarita pizza" />
       <Link to="/form">Pizza?</Link>
     </div>
   );
