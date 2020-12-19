@@ -10,9 +10,6 @@ export default function Banner() {
       <div id="linkText">
         <Link to="/form">Pizza?</Link>
       </div>
-      {/* <Route>
-        <Form />
-      </Route> */}
     </div>
   );
 }

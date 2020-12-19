@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: mediumseagreen;
-  text-decoration: none;
 }
 
 code {
@@ -14,28 +13,44 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 5% 10%;
+  align-items: center;
+  margin: 2% 10%;
 }
 
 .navLinks {
   width: 25%;
   display: flex;
   justify-content: space-between;
-  text-decoration: none;
 }
 
 .homePageContainer img {
   width: 100%;
 }
+
 #linkText {
-  width: 10%;
+  font-size: 1.4rem;
+  width: 20%;
   border-radius: 6%;
   text-align: center;
-  transform: translateY(-70%);
+  transform: translateY(-500%);
+  background-color: rgba(66, 179, 60, 0.2);
+  color: black;
+  margin: 0 auto;
+}
+
+a:hover {
   background-color: slategray;
+  transition: ease-in-out 0.3s;
+  border-radius: 5%;
+  color: white;
 }
 
 .container {
@@ -43,4 +58,15 @@ nav {
   background-color: #b34a3c;
   color: antiquewhite;
   margin: 0 auto;
+}
+.container img {
+  width: 100%;
+}
+
+.inputTitle {
+  background-color: rgba(60, 125, 179, 0.8);
+}
+
+.pizzaBuilder {
+  text-align: center;
 }

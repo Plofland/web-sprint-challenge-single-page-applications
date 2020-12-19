@@ -23,9 +23,12 @@ export default function Form(props) {
           <h3 id="byopH3">This could be yours</h3>
           <img id="formImg" src={pizzaImg} alt="pizza" />
           <h2 id="byopH2">Build Your Own Pizza</h2>
+
           <label>
-            Size&nbsp;
-            <div>{errors.sizeErr}</div>
+            <div className="inputTitle">
+              Size
+              <div>{errors.sizeErr}</div>
+            </div>
             <select className="dropDown" name="pizzaSize" onChange={onChange}>
               <option value="">-Select-</option>
               <option value="small">Small</option>
@@ -33,9 +36,12 @@ export default function Form(props) {
               <option value="large">Large</option>
             </select>
           </label>
+
           <div>
-            Choice of Sauce&nbsp;
-            <div>{errors.sauceErr}</div>
+            <div className="inputTitle">
+              Choice of Sauce&nbsp;
+              <div>{errors.sauceErr}</div>
+            </div>
             <div>
               <label>
                 Red Sauce
@@ -76,8 +82,10 @@ export default function Form(props) {
             </div>
           </div>
           <div>
-            Add Toppings&nbsp;
-            <div>{errors.toppingsErr}</div>
+            <div className="inputTitle">
+              Add Toppings
+              <div>{errors.toppingsErr}</div>
+            </div>
             <div className="toppingCheckboxes">
               <label>
                 Pepperoni
@@ -214,7 +222,7 @@ export default function Form(props) {
             <span class="slider"></span>
           </label> */}
           <label>
-            Special Instructions&nbsp;
+            <div className="inputTitle">Special Instructions</div>
             <input
               type="text"
               name="specialInstructions"
